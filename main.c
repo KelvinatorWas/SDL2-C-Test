@@ -16,10 +16,7 @@ void eventLoop (SDL_Event event, bool *running) {
   }
 }
 
-
-
-int main() {
-  
+int main() { 
   bool running = true;
 
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
