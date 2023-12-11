@@ -7,6 +7,17 @@
 
 const int FAILED = -1;
 
+void eventLoop (SDL_Event event, bool *running) {
+  while (SDL_PollEvent(&event)) { // Check each event
+
+    if (event.type == SDL_QUIT) {
+      *running = false;
+    }
+  }
+}
+
+
+
 int main() {
   
   bool running = true;
@@ -31,13 +42,8 @@ int main() {
   
   while (running) {
     SDL_Event event;
-    
-    while (SDL_PollEvent(&event)) { // Check each event
 
-      if (event.type == SDL_QUIT) {
-        running = false;
-      }
-    }
+    eventLoop(event, &running);
 
     SDL_UpdateWindowSurface(window);// Update Display
   }
