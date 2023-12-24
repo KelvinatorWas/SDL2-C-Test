@@ -14,3 +14,4 @@ In terminal run makefile.
 make
 ```
 ## Hello Template
+![](https://github.com/KelvinatorWas/SDL2-C-Test/blob/Testing-SDL2-C/assets/template.gif)
